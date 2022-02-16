@@ -11,19 +11,21 @@ namespace SorozatKiir
 
         static void Main(string[] args)
         {
-            Console.Write("adjon meg egy egynél nagyobb számot: ");
-            int user = int.Parse(Console.ReadLine());
-            if (user > 1)
+            Console.Write("adjon meg egy minimum értéket: ");
+            int user1 = int.Parse(Console.ReadLine());
+            Console.Write("adjon meg egy maximum értéket: ");
+            int user2 = int.Parse(Console.ReadLine());
+            if (user1 < user2)
             {
-                user +=1;
-                for (int i = 1; i < user; i++)
+                user2 +=1;
+                for (int i = user1; i < user2; i++)
                 {
                     Console.WriteLine(i);
                 }
             }
             else
             {
-                Console.WriteLine("A szám nem nagyobb egynél.....");
+                Console.WriteLine("Minimum és a maximum érték nem megfelelő");
             }
         Console.ReadKey();
 
