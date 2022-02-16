@@ -11,12 +11,20 @@ namespace SorozatKiir
 
         static void Main(string[] args)
         {
-            for (int i = 1; i < 11; i++)
+            Console.Write("adjon meg egy egynél nagyobb számot: ");
+            int user = int.Parse(Console.ReadLine());
+            if (user > 1)
             {
-                Console.WriteLine(i);
+                user +=1;
+                for (int i = 1; i < user; i++)
+                {
+                    Console.WriteLine(i);
+                }
             }
-
-
+            else
+            {
+                Console.WriteLine("A szám nem nagyobb egynél.....");
+            }
         Console.ReadKey();
 
         }
